@@ -11,7 +11,7 @@ public class DrumsTest {
 
     @Before
     public void setUp() throws Exception {
-        drums = new Drums("percussion", "rainbow", 5, 100);
+        drums = new Drums(InstrumentType.PERCUSSION, "rainbow", 5, 100);
     }
 
     @Test

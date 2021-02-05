@@ -5,7 +5,7 @@ public class Bouzouki extends Instrument {
     private int numOfStrings;
     private double neckSize;
 
-    public Bouzouki(String type, String colour, int numOfStrings, double neckSize, double price) {
+    public Bouzouki(InstrumentType type, String colour, int numOfStrings, double neckSize, double price) {
         super(type, colour, price);
         this.numOfStrings = numOfStrings;
         this.neckSize = neckSize;

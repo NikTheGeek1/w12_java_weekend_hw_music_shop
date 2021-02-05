@@ -4,7 +4,7 @@ public class Guitar extends Instrument{
 
     private double neckSize;
 
-    public Guitar(String type, String colour, double neckSize, double price) {
+    public Guitar(InstrumentType type, String colour, double neckSize, double price) {
         super(type, colour, price);
         this.neckSize = neckSize;
     }

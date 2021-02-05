@@ -22,4 +22,11 @@ public class Shop {
         return this.stock.remove(this.stock.indexOf(item));
     }
 
+    public double totalPotentialProfit() {
+        double total = 0;
+        for (ISell item : stock) {
+            total += item.calculateMarkup();
+        }
+        return total;
+    }
 }

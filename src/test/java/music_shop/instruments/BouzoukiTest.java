@@ -11,7 +11,7 @@ public class BouzoukiTest {
 
     @Before
     public void setUp() throws Exception {
-        bouzouki = new Bouzouki("Chord", "black", 8, 1.10, 100);
+        bouzouki = new Bouzouki(InstrumentType.CHORDS, "black", 8, 1.10, 100);
     }
 
     @Test

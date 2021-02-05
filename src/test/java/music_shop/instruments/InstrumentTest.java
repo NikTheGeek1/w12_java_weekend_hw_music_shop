@@ -11,18 +11,18 @@ public class InstrumentTest {
 
     @Before
     public void setUp() throws Exception {
-        bouzouki = new Bouzouki("Chord", "black", 4, 8, 1.10);
+        bouzouki = new Bouzouki(InstrumentType.CHORDS, "black", 4, 8, 1.10);
     }
 
     @Test
     public void getType() {
-        assertEquals("Chord", bouzouki.getType());
+        assertEquals(InstrumentType.CHORDS, bouzouki.getType());
     }
 
     @Test
     public void setType() {
-        bouzouki.setType("Hybrid");
-        assertEquals("Hybrid", bouzouki.getType());
+        bouzouki.setType(InstrumentType.PERCUSSION);
+        assertEquals(InstrumentType.PERCUSSION, bouzouki.getType());
     }
 
     @Test

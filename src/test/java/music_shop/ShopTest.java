@@ -2,6 +2,7 @@ package music_shop;
 
 import music_shop.instruments.Bouzouki;
 import music_shop.instruments.Guitar;
+import music_shop.instruments.InstrumentType;
 import music_shop.other.Pick;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,7 +20,7 @@ public class ShopTest {
 
     @Before
     public void setUp() throws Exception {
-        bouzouki = new Bouzouki("chord", "black", 4, 1.1, 100);
+        bouzouki = new Bouzouki(InstrumentType.CHORDS, "black", 4, 1.1, 100);
         pick = new Pick("Pick for bouzouki", 100, 80);
         stock = new ArrayList<ISell>();
         stock.add(bouzouki);
@@ -34,7 +35,7 @@ public class ShopTest {
 
     @Test
     public void addToStock() {
-        Guitar guitar = new Guitar("chord", "black", .8, 100 );
+        Guitar guitar = new Guitar(InstrumentType.CHORDS, "black", .8, 100 );
         shop.addToStock(guitar);
         assertEquals(3, shop.getStock().size());
     }
@@ -43,5 +44,10 @@ public class ShopTest {
     public void removeFromStock() {
         shop.removeFromStock(bouzouki);
         assertEquals(1, shop.getStock().size());
+    }
+
+    @Test
+    public void totalPotentialProfit() {
+        assertEquals(120, shop.totalPotentialProfit(), 0.0);
     }
 }

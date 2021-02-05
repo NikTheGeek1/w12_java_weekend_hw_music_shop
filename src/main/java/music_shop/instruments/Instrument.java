@@ -4,7 +4,7 @@ import music_shop.ISell;
 
 public abstract class Instrument implements IPlay, ISell {
 
-    private String type;
+    private InstrumentType type;
     private String colour;
     private double price;
 
@@ -16,17 +16,17 @@ public abstract class Instrument implements IPlay, ISell {
         this.price = price;
     }
 
-    public Instrument(String type, String colour, double price) {
+    public Instrument(InstrumentType type, String colour, double price) {
         this.type = type;
         this.colour = colour;
         this.price = price;
     }
 
-    public String getType() {
+    public InstrumentType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(InstrumentType type) {
         this.type = type;
     }
 

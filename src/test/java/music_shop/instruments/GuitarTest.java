@@ -11,7 +11,7 @@ public class GuitarTest {
 
     @Before
     public void setUp() throws Exception {
-        guitar = new Guitar("chord", "white", .80, 100);
+        guitar = new Guitar(InstrumentType.CHORDS, "white", .80, 100);
     }
 
     @Test

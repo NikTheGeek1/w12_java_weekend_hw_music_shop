@@ -4,7 +4,7 @@ public class Drums extends Instrument {
 
     private int numOfParts;
 
-    public Drums(String type, String colour, int numOfParts, double price) {
+    public Drums(InstrumentType type, String colour, int numOfParts, double price) {
         super(type, colour, price);
         this.numOfParts = numOfParts;
     }
